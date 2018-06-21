@@ -10,7 +10,8 @@ package source;
  * @author Gabriel
  */
 public class Usuario {
-    public  String nombre = "miguelito";
+    public  String nombre;
     public  String contraseña;
+    
     
 }

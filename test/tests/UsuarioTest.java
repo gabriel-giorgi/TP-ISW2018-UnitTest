@@ -5,6 +5,7 @@
  */
 package tests;
 
+import static junit.framework.Assert.*;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -49,15 +50,20 @@ public class UsuarioTest {
            Usuario alumno1 = new Usuario();
         alumno1.nombre="hola";
                 
-         assert alumno1.nombre!=null;
-        
+         assert  alumno1.nombre!=null;
+         alumno1.nombre="";
+         assert (alumno1.nombre) != null;
+         alumno1.nombre="24";
+         assert (alumno1.nombre) !=null;
+         alumno1.nombre="hola24";
+         assert (alumno1.nombre) !=null;
+         
     }
     @Test
-    public void testUsuarioContraseña() {
-           Usuario alumno1 = new Usuario();
-        alumno1.contraseña="afsadfa";
-                
-         assert alumno1.nombre!=null;
+    public void testUsuarioContraseña(){     
+        Usuario alumno1 = new Usuario();
+        alumno1.contraseña="afsadfa";      
+         assert alumno1.contraseña!=null;
         
     }
     
