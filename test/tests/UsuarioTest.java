@@ -12,7 +12,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import source.Ejercicio;
 import source.Usuario;
+import source.Nivel;
+import source.TipoUsuario;
 
 
 /**
@@ -66,5 +69,25 @@ public class UsuarioTest {
          assert alumno1.contraseña!=null;
         
     }
-    
+    @Test
+     public void testUsuarioContengaNivel(){     
+        Usuario alumno1 = new Usuario();
+        Nivel nivel = new Nivel();
+        nivel.setNombreNivel("principiante");
+        nivel.setExperiencia(0);
+        alumno1.nivel= nivel;      
+         assert alumno1.nivel!=null;
+        
+    }
+     @Test
+     public void testProfesorAsigneDificultadAEjercicio(){
+     Usuario profesor = new Usuario();
+     Ejercicio problema = new Ejercicio();
+     TipoUsuario tipousuario= new TipoUsuario();
+     tipousuario.setTipoUsuario("profesor");
+     profesor.setTipoUsuario(tipousuario);
+     profesor.ej.add(problema);
+     profesor.ej.get(0).setDificultad("medio");
+     assert profesor.ej.get(0).dificultad!=null;
+     }
 }
