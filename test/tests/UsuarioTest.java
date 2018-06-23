@@ -50,33 +50,33 @@ public class UsuarioTest {
 
     @Test
     public void testUsuarioNombre() {
-           Usuario alumno1 = new Usuario();
-        alumno1.nombre="hola";
-                
-         assert  alumno1.nombre!=null;
-         alumno1.nombre="";
-         assert (alumno1.nombre) != null;
-         alumno1.nombre="24";
-         assert (alumno1.nombre) !=null;
-         alumno1.nombre="hola24";
-         assert (alumno1.nombre) !=null;
+         Usuario alumno1 = new Usuario();
+         alumno1.setNombre("");     
+         assert  alumno1.getNombre()==null;
+         alumno1.setNombre("2456");
+         assert (alumno1.getNombre()) != null;
+         alumno1.setNombre("1234567");
+         assert (alumno1.getNombre()) !=null;
+         alumno1.setNombre("prueba7893");
+         assert (alumno1.getNombre()) !=null;
          
     }
     @Test
     public void testUsuarioContraseña(){     
         Usuario alumno1 = new Usuario();
-        alumno1.contraseña="afsadfa";      
-         assert alumno1.contraseña!=null;
-        
+         alumno1.setContraseña("232a");
+         assert alumno1.getContraseña()== null;
+         alumno1.setContraseña("prueba123");
+         assert alumno1.getContraseña()!=null;
     }
     @Test
      public void testUsuarioContengaNivel(){     
         Usuario alumno1 = new Usuario();
         Nivel nivel = new Nivel();
-        nivel.setNombreNivel("principiante");
         nivel.setExperiencia(0);
-        alumno1.nivel= nivel;      
-         assert alumno1.nivel!=null;
+        nivel.calculoNivel();
+        alumno1.setNivel(nivel);      
+        assert alumno1.getNivel() !=null;
         
     }
      @Test

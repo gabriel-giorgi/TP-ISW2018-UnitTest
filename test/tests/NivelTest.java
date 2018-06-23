@@ -53,13 +53,13 @@ public class NivelTest {
        assert "avanzado".equals(nivel1.getNombreNivel());
        nivel1.setExperiencia(5000);
        nivel1.calculoNivel();
-       assert "novato".equals(nivel1.getNombreNivel());
+       assert "principiante".equals(nivel1.getNombreNivel());
        nivel1.setExperiencia(0);
        nivel1.calculoNivel();
-       assert "novato".equals(nivel1.getNombreNivel());
+       assert "principiante".equals(nivel1.getNombreNivel());
        nivel1.setExperiencia(9999);
        nivel1.calculoNivel();
-       assert "novato".equals(nivel1.getNombreNivel());
+       assert "principiante".equals(nivel1.getNombreNivel());
                           }    
     }        
     
